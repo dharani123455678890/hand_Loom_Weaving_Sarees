@@ -54,7 +54,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold italic">
-              {isTamil ? "ஆர்டரின் பெயரில் நெய்த்துறப்படும்" : "Woven in the name of your order"}
+              {isTamil ? "ஆர்டரின் பெயரில் நெய்துதரப்படும்" : "Woven in the name of your order"}
             </p>
 
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light">
