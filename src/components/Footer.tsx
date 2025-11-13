@@ -1,4 +1,5 @@
 import { MapPin, Phone, MessageCircle } from "lucide-react";
+import ExternalLink from "@/components/ExternalLink";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,21 +22,20 @@ const Footer = () => {
           <div className="space-y-3 sm:space-y-4">
             <h4 className="text-lg sm:text-xl font-semibold">Quick Contact</h4>
             <div className="space-y-2 sm:space-y-3">
-              <a
-                href="https://wa.me/919189889549"
-                target="_blank"
-                rel="noopener noreferrer"
+              <ExternalLink
+                href="https://wa.me/918489889549"
+                blank
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity text-sm sm:text-base"
               >
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                <span>+91 91898 89549 (WhatsApp)</span>
-              </a>
+                <span>+91 84898 89549 (WhatsApp)</span>
+              </ExternalLink>
               <a
-                href="tel:+919189889549"
+                href="tel:+918489889549"
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity text-sm sm:text-base"
               >
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                <span>+91 91898 89549</span>
+                <span>+91 84898 89549</span>
               </a>
             </div>
           </div>

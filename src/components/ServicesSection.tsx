@@ -1,12 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/useLanguage";
+
 
 const ServicesSection = () => {
+   const { isTamil, toggleLanguage } = useLanguage();
   const sareeTypes = [
     {
       tamil: "முகூர்த்தப்பட்டு",
       english: "Muhurtha Pattu",
-      description: "Traditional ceremonial silk sarees perfect for auspicious occasions and weddings",
+      description:
+        "Traditional ceremonial silk sarees perfect for auspicious occasions and weddings",
     },
     {
       tamil: "நிச்சயதார்த்தப்பட்டு",
@@ -16,7 +20,8 @@ const ServicesSection = () => {
     {
       tamil: "சாப்ட் பட்டு",
       english: "Soft Silk",
-      description: "Luxurious soft silk sarees with comfortable drape and rich texture",
+      description:
+        "Luxurious soft silk sarees with comfortable drape and rich texture",
     },
     {
       tamil: "கிப்ட் பட்டு",
@@ -26,7 +31,8 @@ const ServicesSection = () => {
     {
       tamil: "எம்போஸ் பட்டு",
       english: "Emboss Silk",
-      description: "Unique embossed patterns that add depth and elegance to silk sarees",
+      description:
+        "Unique embossed patterns that add depth and elegance to silk sarees",
     },
   ];
 
@@ -38,7 +44,8 @@ const ServicesSection = () => {
             Our Saree Collections
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            Discover our exquisite range of handwoven silk sarees, each crafted with precision and care
+            Discover our exquisite range of handwoven silk sarees, each crafted
+            with precision and care
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4" />
         </div>
@@ -61,7 +68,7 @@ const ServicesSection = () => {
                   </div>
                   <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-accent flex-shrink-0" />
                 </div>
-                
+
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {saree.description}
                 </p>
@@ -76,7 +83,9 @@ const ServicesSection = () => {
 
         <div className="text-center mt-8 sm:mt-12 px-4">
           <p className="text-base sm:text-lg text-muted-foreground italic">
-            All sarees can be customized according to your design preferences
+            {isTamil
+              ? "எல்லா சேலைகளும் உங்கள் விருப்பத்திற்கேற்ப வடிவமைக்கப்படும்."
+              : "All sarees can be customized according to your design preferences"}
           </p>
         </div>
       </div>

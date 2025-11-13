@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/useLanguage";
+import ExternalLink from "@/components/ExternalLink";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isTamil, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,33 +65,42 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            {/* Language toggle - global */}
+            <Button variant="outline" size="sm" onClick={toggleLanguage}>
+              {isTamil ? "தமிழ்" : "EN"}
+            </Button>
             <Button
               variant="whatsapp"
               size="sm"
               asChild
             >
-              <a
-                href="https://wa.me/919189889549"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <ExternalLink href="https://wa.me/918489889549" blank>
                 <Phone className="mr-2 h-4 w-4" />
                 WhatsApp
-              </a>
+              </ExternalLink>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
-            ) : (
-              <Menu className="h-6 w-6 text-foreground" />
-            )}
-          </button>
+          <div className="flex items-center gap-2">
+            {/* Mobile-only language toggle (always visible on small screens) */}
+            <div className="md:hidden">
+              <Button variant="outline" size="sm" onClick={toggleLanguage}>
+                {isTamil ? "தமிழ்" : "EN"}
+              </Button>
+            </div>
+
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6 text-foreground" />
+              ) : (
+                <Menu className="h-6 w-6 text-foreground" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -110,15 +122,12 @@ const Navigation = () => {
                 asChild
                 className="w-full"
               >
-                <a
-                  href="https://wa.me/919189889549"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Phone className="mr-2 h-4 w-4" />
-                  Contact via WhatsApp
-                </a>
+                  <ExternalLink href="https://wa.me/918489889549" blank>
+                    <Phone className="mr-2 h-4 w-4" />
+                    Contact via WhatsApp
+                  </ExternalLink>
               </Button>
+              {/* language toggle moved to header for mobile; keep mobile menu uncluttered */}
             </div>
           </div>
         )}
