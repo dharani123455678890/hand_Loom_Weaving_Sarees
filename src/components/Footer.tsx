@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-3 sm:space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold">Hand Loom Weaving Sarees</h3>
-            <p className="text-base sm:text-lg italic opacity-90">ஆர்டரின் பெயரில் நெய்துதரப்படு</p>
+            <p className="text-base sm:text-lg italic opacity-90">ஆர்டரின் பெயரில் நெய்துதரப்படும்</p>
             <p className="text-xs sm:text-sm opacity-80">
               Traditional hand loom sarees crafted with precision and care. 
               Every thread tells a story.
