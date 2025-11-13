@@ -47,7 +47,7 @@ const Navigation = () => {
             className="flex flex-col items-start"
           >
             <h1 className="text-xl md:text-2xl font-bold text-primary">
-              Hand Loom Weaving Saree
+              Hand Loom Weaving Sarees
             </h1>
             <p className="text-xs md:text-sm text-muted-foreground italic">
               ஆர்டரின் பெயரில் நைத்துறப்படும்
