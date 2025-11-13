@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Brand */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-xl sm:text-2xl font-bold">Hand Loom Weaving Saree</h3>
+            <h3 className="text-xl sm:text-2xl font-bold">Hand Loom Weaving Sarees</h3>
             <p className="text-base sm:text-lg italic opacity-90">ஆர்டரின் பெயரில் நைத்துறப்படும்</p>
             <p className="text-xs sm:text-sm opacity-80">
               Traditional hand loom sarees crafted with precision and care. 
