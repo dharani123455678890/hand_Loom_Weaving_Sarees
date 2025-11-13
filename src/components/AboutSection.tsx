@@ -55,7 +55,7 @@ const AboutSection = () => {
               <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-4 sm:p-6 rounded-lg border-l-4 border-primary">
                 <p className="text-base sm:text-lg font-medium text-foreground italic">
                   {isTamil
-                    ? "“நாங்கள் நெய்யும் ஒவ்வொரு சேலையும், உங்கள் கவலையில் இருக்கும் சேலையை நினைவாக மாற்றி கொடுப்பதே ஆகும்.”"
+                    ? "“நாங்கள் நெய்யும் ஒவ்வொரு சேலையும், உங்கள் கனவில் இருக்கும் சேலையை நினைவாக மாற்றி கொடுப்பதே ஆகும்.”"
                     : "“Every saree we weave carries the essence of your dreams, woven with care and precision.”"}
                 </p>
               </div>
